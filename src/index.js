@@ -53,4 +53,31 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm = addEventListener("submit", search);
 
+function displayForecast() {
+	let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+	let forecastHtml = "";
+
+	days.forEach(function (day) {
+		forecastHtml =
+			forecastHtml +
+			`
+      
+      <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature-max">
+            78º
+          </div>
+          <div class="weather-forecast-temperature-min">69º</div>
+        </div>
+      </div>
+    `;
+	});
+
+	let forecastElement = document.querySelector("#forecast");
+	forecastElement.innerHTML = forecastHtml;
+}
+
 searchCity("Hawaii");
+displayForecast();
