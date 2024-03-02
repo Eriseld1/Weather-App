@@ -108,7 +108,6 @@ footer {
 }
 
 .weather-forecast-icon {
-	font-size: 38px;
 	text-align: center;
 	width: 88px;
 	height: 67px;
@@ -117,6 +116,7 @@ footer {
 }
 .weather-forecast-temperatures {
 	color: #526cf6;
+	text-align: center;
 	margin-top: 10px;
 	display: flex;
 	justify-content: center;
